@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2023_06_13_164904) do
   create_table "games", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.string "image"
+    t.string "image_url"
   end
 
 end
