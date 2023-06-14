@@ -1,4 +1,4 @@
 class Game < ActiveRecord::Base
-    attr_accessor :image_url
+    # attr_accessor :image_url
 
 end
