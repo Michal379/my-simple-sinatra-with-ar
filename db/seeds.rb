@@ -1,5 +1,6 @@
 puts "🌱 Seeding games..."
 Game.destroy_all
+User.destroy_all
 
 Game.create([
   { name: "background jewel",
@@ -23,5 +24,16 @@ Game.create([
     price: 8800,
     image_url: "https://i.pinimg.com/564x/90/8e/ac/908eace752417abeb978995b5e5a0495.jpg" }
 ])
+
+require 'faker'
+
+5.times do
+  User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    identity: Faker::IDNumber.valid,
+    phone_number: Faker::PhoneNumber.cell_phone_in_e164
+  )
+end
 
 puts "✅ Done seeding!"
