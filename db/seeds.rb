@@ -1,11 +1,13 @@
 puts "🌱 Seeding games..."
 Game.destroy_all
 User.destroy_all
+background_jewel_url = "https://i.pinimg.com/564x/18/0d/ff/180dffaa23dd263c714ba4a03d7f6b34.jpg"
 
 Game.create([
   { name: "background jewel",
     price: 4500,
-    image_url: "https://i.pinimg.com/564x/18/0d/ff/180dffaa23dd263c714ba4a03d7f6b34.jpg" },
+    image_url: background_jewel_url
+   },
 
   { 
     name: "Volleyball",
